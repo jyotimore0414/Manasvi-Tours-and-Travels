@@ -1,0 +1,565 @@
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    padding: 9px;
+    border: 1px solid #d9e7e9;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 4px auto;
+    background: #17324d;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.navbar.nav-open .menu-toggle span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.navbar.nav-open .menu-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar.nav-open .menu-toggle span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.footer-contact p img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.developer-credit {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(199, 214, 223, 0.2);
+    text-align: center;
+    color: #c7d6df;
+    font-size: 12px;
+}
+
+.developer-credit a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.service-home-card,
+.car-card,
+.feature,
+.destination-card,
+.mission-card,
+.step-card,
+.service-card,
+.benefit-card,
+.quick-card {
+    min-width: 0;
+}
+
+@media (max-width: 1200px) {
+    .navbar {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .navbar nav {
+        gap: 18px;
+    }
+
+    .quick-features,
+    .booking-box,
+    .services-home,
+    .cars-section,
+    .why-us,
+    .nashik-section,
+    .footer-content {
+        width: 92%;
+    }
+
+    .service-home-container,
+    .car-container,
+    .features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar nav {
+        gap: 14px;
+    }
+
+    .navbar nav a {
+        font-size: 14px;
+    }
+
+    .booking-fields {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+
+    .footer-about {
+        grid-column: 1 / -1;
+    }
+
+    .mission-grid,
+    .steps-grid,
+    .service-grid,
+    .benefit-grid,
+    .quick-contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        min-height: 70px;
+        padding: 10px 4%;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .logo img {
+        width: 135px;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 2;
+    }
+
+    .navbar > .book-btn {
+        display: none;
+    }
+
+    .navbar nav {
+        display: flex;
+        order: 4;
+        flex-basis: 100%;
+        width: 100%;
+        max-height: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0;
+        border-top: 1px solid transparent;
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    }
+
+    .navbar.nav-open nav {
+        max-height: 420px;
+        padding: 8px 0 4px;
+        border-top-color: #e2edef;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .navbar nav a {
+        padding: 10px 4px;
+        font-size: 15px;
+    }
+
+    .navbar nav .book-btn {
+        display: block;
+        margin: 6px 0 4px;
+        text-align: center;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .hero-content {
+        width: 92%;
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 8vw, 56px);
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .quick-features {
+        margin-top: -28px;
+        padding: 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 14px;
+    }
+
+    .booking-box-section {
+        padding-top: 55px;
+    }
+
+    .booking-box {
+        padding: 25px;
+    }
+
+    .services-home,
+    .cars-section,
+    .why-us,
+    .nashik-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .about-intro,
+    .about-why,
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-intro,
+    .about-why {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .about-image img {
+        height: 360px;
+    }
+
+    .service-main,
+    .service-benefits,
+    .contact-section,
+    .quick-contact,
+    .mission-section,
+    .about-steps {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        min-height: 480px;
+    }
+
+    .hero-content {
+        padding: 55px 0;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .quick-features,
+    .service-home-container,
+    .car-container,
+    .features,
+    .destination-container,
+    .mission-grid,
+    .steps-grid,
+    .service-grid,
+    .benefit-grid,
+    .quick-contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .quick-features {
+        width: 92%;
+        padding: 16px;
+        gap: 16px 10px;
+    }
+
+    .quick-feature {
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .quick-feature > span {
+        width: 38px;
+        height: 38px;
+    }
+
+    .quick-feature h3 {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    .quick-feature p {
+        font-size: 11px;
+        line-height: 1.35;
+    }
+
+    .booking-box {
+        width: 92%;
+        padding: 20px;
+    }
+
+    .booking-fields,
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .service-home-card,
+    .feature,
+    .mission-card,
+    .step-card,
+    .service-card,
+    .benefit-card,
+    .quick-card {
+        padding: 16px 12px;
+    }
+
+    .service-home-card h3,
+    .feature h3,
+    .mission-card h3,
+    .step-card h3,
+    .service-card h3,
+    .benefit-card h3,
+    .quick-card h3 {
+        font-size: 16px;
+        overflow-wrap: anywhere;
+    }
+
+    .service-home-card p,
+    .feature p,
+    .mission-card p,
+    .step-card p,
+    .benefit-card p,
+    .quick-card p {
+        font-size: 13px;
+    }
+
+    .service-card p {
+        min-height: 0;
+        margin-bottom: 12px;
+        font-size: 13px;
+        line-height: 1.45;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+    }
+
+    .car-image img,
+    .car-card-image img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+
+    .car-info,
+    .car-card-content {
+        padding: 14px;
+    }
+
+    .car-info h3,
+    .car-card-content h3 {
+        font-size: clamp(16px, 4vw, 19px);
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+    }
+
+    .car-info p,
+    .car-card-content p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        font-size: 13px;
+        line-height: 1.45;
+        margin-bottom: 12px;
+    }
+
+    .car-info a,
+    .car-book-btn {
+        display: block;
+        font-size: 13px;
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    .destination-card img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .destination-card h3 {
+        font-size: 16px;
+        padding: 14px 12px 5px;
+        overflow-wrap: anywhere;
+    }
+
+    .destination-card p {
+        min-height: 0;
+        font-size: 13px;
+        padding: 0 12px 10px;
+    }
+
+    .destination-card a {
+        margin: 0 12px 14px;
+        font-size: 13px;
+    }
+
+    .about-hero h1,
+    .contact-hero h1,
+    .service-hero h1,
+    .page-hero h1 {
+        font-size: clamp(31px, 9vw, 40px);
+    }
+
+    .about-content h2,
+    .mission-heading h2,
+    .steps-heading h2,
+    .why-content h2,
+    .service-heading h2,
+    .benefit-heading h2,
+    .contact-heading h2,
+    .quick-heading h2,
+    .contact-cta h2,
+    .service-cta h2,
+    .about-cta h2 {
+        font-size: 28px;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .contact-form-box {
+        padding: 22px 18px;
+    }
+
+    .footer-content {
+        width: 92%;
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-about {
+        grid-column: auto;
+    }
+
+    .cta {
+        width: 92%;
+        margin-bottom: 55px;
+        padding: 38px 18px;
+    }
+}
+
+@media (max-width: 430px) {
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .quick-feature > span {
+        display: none;
+    }
+
+    .quick-feature h3 {
+        font-size: 12px;
+    }
+
+    .quick-feature p {
+        font-size: 10px;
+    }
+
+    .car-badge {
+        top: 8px;
+        left: 8px;
+        padding: 5px 7px;
+        font-size: 10px;
+    }
+
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .whatsapp-btn img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo img {
+        width: 122px;
+    }
+
+    .quick-features,
+    .booking-box,
+    .services-home,
+    .cars-section,
+    .why-us,
+    .nashik-section,
+    .cta {
+        width: 94%;
+    }
+
+    .quick-features,
+    .service-home-container,
+    .car-container,
+    .features,
+    .destination-container,
+    .mission-grid,
+    .steps-grid,
+    .service-grid,
+    .benefit-grid,
+    .quick-contact-grid {
+        gap: 10px;
+    }
+
+    .booking-box {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo img {
+        width: 112px;
+    }
+
+    .menu-toggle {
+        width: 38px;
+        height: 38px;
+        padding: 7px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+}
