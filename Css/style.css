@@ -753,3 +753,29 @@ footer {
     transform: scale(1.08);
 }
 
+
+.instagram-float {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 60px;
+    height: 50px;
+    background: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    transition: transform 0.3s ease;
+}
+
+.instagram-float img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.instagram-float:hover {
+    transform: scale(1.1);
+}
